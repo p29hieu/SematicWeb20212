@@ -1,24 +1,24 @@
-﻿@prefix : <http://3.21.204.141:8000/index.owl#> .
+@prefix : <http://3.21.204.141/my-file/index.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://3.21.204.141:8000/index.owl> .
+@base <http://3.21.204.141/my-file/index.owl> .
 
-<http://3.21.204.141:8000/index.owl> rdf:type owl:Ontology .
+<http://3.21.204.141/my-file/index.owl> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://3.21.204.141:8000/index.owl#atCountry
+###  http://3.21.204.141/my-file/index.owl#atCountry
 :atCountry rdf:type owl:ObjectProperty ;
            rdfs:domain :City ;
            rdfs:range :Country .
 
 
-###  http://3.21.204.141:8000/index.owl#belongTo
+###  http://3.21.204.141/my-file/index.owl#belongTo
 :belongTo rdf:type owl:ObjectProperty ;
           owl:inverseOf :hasIslands ;
           rdfs:domain :Island ;
@@ -26,20 +26,20 @@
                      :Country .
 
 
-###  http://3.21.204.141:8000/index.owl#hasIslands
+###  http://3.21.204.141/my-file/index.owl#hasIslands
 :hasIslands rdf:type owl:ObjectProperty ;
             rdfs:domain :Country ;
             rdfs:range :Island .
 
 
-###  http://3.21.204.141:8000/index.owl#hasPlace
+###  http://3.21.204.141/my-file/index.owl#hasPlace
 :hasPlace rdf:type owl:ObjectProperty ;
           owl:inverseOf :placeAt ;
           rdfs:domain :Island ;
           rdfs:range :Place .
 
 
-###  http://3.21.204.141:8000/index.owl#placeAt
+###  http://3.21.204.141/my-file/index.owl#placeAt
 :placeAt rdf:type owl:ObjectProperty ;
          rdfs:domain :Place ;
          rdfs:range :Island .
@@ -49,25 +49,25 @@
 #    Data properties
 #################################################################
 
-###  http://3.21.204.141:8000/index.owl#hasAbstract
+###  http://3.21.204.141/my-file/index.owl#hasAbstract
 :hasAbstract rdf:type owl:DatatypeProperty ;
              rdfs:domain :Island ;
              rdfs:range xsd:string .
 
 
-###  http://3.21.204.141:8000/index.owl#hasLat
+###  http://3.21.204.141/my-file/index.owl#hasLat
 :hasLat rdf:type owl:DatatypeProperty ;
         rdfs:domain :Island ;
         rdfs:range xsd:string .
 
 
-###  http://3.21.204.141:8000/index.owl#hasLong
+###  http://3.21.204.141/my-file/index.owl#hasLong
 :hasLong rdf:type owl:DatatypeProperty ;
          rdfs:domain :Island ;
          rdfs:range xsd:string .
 
 
-###  http://3.21.204.141:8000/index.owl#hasName
+###  http://3.21.204.141/my-file/index.owl#hasName
 :hasName rdf:type owl:DatatypeProperty ;
          rdfs:domain :City ,
                      :Country ,
@@ -76,7 +76,7 @@
          rdfs:range xsd:Name .
 
 
-###  http://3.21.204.141:8000/index.owl#hasSquare
+###  http://3.21.204.141/my-file/index.owl#hasSquare
 :hasSquare rdf:type owl:DatatypeProperty ;
            rdfs:domain :Island ;
            rdfs:range xsd:double .
@@ -86,28 +86,28 @@
 #    Classes
 #################################################################
 
-###  http://3.21.204.141:8000/index.owl#City
+###  http://3.21.204.141/my-file/index.owl#City
 :City rdf:type owl:Class .
 
 
-###  http://3.21.204.141:8000/index.owl#Country
+###  http://3.21.204.141/my-file/index.owl#Country
 :Country rdf:type owl:Class .
 
 
-###  http://3.21.204.141:8000/index.owl#Island
+###  http://3.21.204.141/my-file/index.owl#Island
 :Island rdf:type owl:Class .
 
 
-###  http://3.21.204.141:8000/index.owl#Place
+###  http://3.21.204.141/my-file/index.owl#Place
 :Place rdf:type owl:Class .
 
 
-###  http://3.21.204.141:8000/index.owl#Restaurant
+###  http://3.21.204.141/my-file/index.owl#Restaurant
 :Restaurant rdf:type owl:Class ;
             rdfs:subClassOf :Place .
 
 
-###  http://3.21.204.141:8000/index.owl#TouristAttraction
+###  http://3.21.204.141/my-file/index.owl#TouristAttraction
 :TouristAttraction rdf:type owl:Class ;
                    rdfs:subClassOf :Place .
 
