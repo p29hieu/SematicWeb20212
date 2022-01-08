@@ -1,0 +1,18 @@
+﻿version: '3.9'
+
+services:
+  db:
+    container_name: semantic_db
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./docker-data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
